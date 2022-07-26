@@ -1,0 +1,30 @@
+<%- include('header'); -%>
+    <div class="box" id="heading">
+        <h1> <%= todoTitle %> </h1>
+
+    </div>
+
+    <div class="box">
+
+        <%for(let i =0; i < newItems.length; i++){%>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+                <p><%=newItems[i]%></p>
+            </div>
+        <%}%>
+        
+        <form class="item" action="/" method="post">
+            <input type="text" name="todo" id="todo" placeholder="what to do next" autocomplete="off">
+            <!-- <label for="todo">what to do next</label> -->
+            <button type="submit" name="list" value=<%= todoTitle %>>+</button>
+        </form>
+
+    </div>
+    <!-- using EJS scriptlet -->
+    <!-- <% if(todoTitle === "saturday" || todoTitle === "Sunday") { %>
+        <h1 style="color: red;"><%= todoTitle %> </h1>
+    <%} else {%>
+        <h1 style="color: green;"><%= todoTitle %> </h1>
+    <%}%> -->
+    
+<%- include('footer'); -%>
